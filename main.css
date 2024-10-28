@@ -1,15 +1,55 @@
 html, .main-div{
-    background-color: blue;
+    background-color: #32a8a8;
     width: 100vw;
     height: 100vh;
 }
 
-.title{
+/** HELPERS HELPERS HEPERS HELPERS HELPERS HELPERS **/
 
+.center-col{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.text-center{
+    text-align:center;
+}
+
+/** HELPERS HELPERS HEPERS HELPERS HELPERS HELPERS **/
+
+.title{
+color:white;
 }
 
 .subtitle{
+color:white;
+}
 
+.file-wrap{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:25%;
+    background-color:white;
+}
+.file-ttl{
+    color:white;
+    font-size:1.5em;
+    
+    background-color:#32a8a8;
+    width:15%;
+    padding:0.1em;
+    margin-top:0;
+    
 }
 
 .R{
