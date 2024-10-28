@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src = "main.js"></script>
     <meta charset="UTF-8">
     <link href = "main.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,19 @@
     <div class = "main-div center-col">
         <!-- Title -->
         <h1 style="z-index: 9;" class = "title text-center ">Astronomical Data Plotter </h1>
-        <div class="mid-wrap center">
-            <div class="display text-center">
+        <div class="mid-wrap">
+            <div class="display text-center center">
                 <input id="file-inp" type="file">
             </div>
-            <div class="tools"></div>
         </div>
+        <div class="tools"></div>
         <!-- File Wrap-->
-        <div class="file-wrap">
+        <div id = "f-box" class="file-wrap">
+            <h1 id="f-arr" class="f-arrow">></h1>
             <p class="file-ttl text-center">My Files</p>
         </div>
     </div>
+    
 </body>
+<script src = "main.js"></script>
 </html>
