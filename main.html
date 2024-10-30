@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src = "main.js"></script>
     <meta charset="UTF-8">
     <link href = "main.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomical Data File Plotter</title>
 </head>
 <body>
-    <div class = "main-div">
-        <h1 class = "title">Astronomical Data Plotter </h1>
-        <h2 class = "subtitle L">Data File Box</h2>
-        <h2 class = "subtitle R">Functions </h2>
-
+    <!-- Main div -->
+    <div class = "main-div center-col">
+        <!-- Title -->
+        <h1 style="z-index: 9;" class = "title text-center ">Astronomical Data Plotter </h1>
+        <!--Main Wrap-->
+        <div id="screen" class="mid-wrap center-col">
+                <input id="file-inp" type="file" multiple>
+                <p id = "upload">Upload</p>
+        </div>
+        <div class="tools"></div>
+        <!-- File Wrap-->
+        <div id = "f-box" class="file-wrap center">
+            <h1 id="f-arr" class="f-arrow center">></h1>
+            <p class="file-ttl text-center">My Files</p>
+            <div id="scroll-file" class="scroll-file center-h">
+                <p id = "up-txt" style="text-align: center; width:100%;">Upload A File(s)</p>
+            </div>
+        </div>
     </div>
+    
 </body>
+<script src = "main.js"></script>
 </html>
