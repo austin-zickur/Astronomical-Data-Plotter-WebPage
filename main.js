@@ -25,10 +25,11 @@ function addActiveClass(file){
 }
 
 function displayFile(file){
-    for(let i=0; i < file.length; i++){
-        var f = file[i]
+    console.log(file)
+    for(const f of file){
+        
         f.addEventListener("click", function(){
-            mainScreen.innerHTML = `${fileList.reverse()[i]}`
+            mainScreen.innerHTML = f.innerText;
         });
     };
 }
@@ -65,7 +66,7 @@ fileArrow.addEventListener("click", function(){
         console.log(`${file.name}`);
     };
 
-    var fileCont = Array.from(document.getElementsByClassName("file-cont"))
+    var fileCont = document.querySelectorAll(".file-cont")
     addActiveClass(fileCont)
     displayFile(fileCont)
     //CLEAR the FILE INPUT AFTER UPLOAD
