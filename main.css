@@ -21,6 +21,11 @@ html, body,.main-div{
     justify-content:center;
 }
 
+.center-h{
+    display:flex;
+    align-items:center;
+}
+
 .text-center{
     text-align:center;
 }
@@ -129,7 +134,7 @@ color:white;
 .file-cont{
 padding:1em;
 border-radius:20px;
-
+margin-left:1em;
 }
 
 
