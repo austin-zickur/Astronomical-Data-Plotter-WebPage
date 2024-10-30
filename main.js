@@ -26,8 +26,7 @@ function addActiveClass(file){
 
 function displayFile(file){
     console.log(file)
-    for(const f of file){
-        
+    for(const f of file){    
         f.addEventListener("click", function(){
             mainScreen.innerHTML = f.innerText;
         });
