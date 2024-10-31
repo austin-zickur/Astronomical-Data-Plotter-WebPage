@@ -13,6 +13,9 @@ var upMore = document.getElementById("up-more");
 var inpWrap = document.getElementById("inp-wrap");
 var nameFi = document.getElementById("filename");
 
+var toolBtn = document.getElementById("tool-btn");
+var toolBox = document.getElementById("tools");
+
 
 var fileList = [];
 
@@ -43,12 +46,20 @@ function displayFile(file){
         });
     }};
 
+
+/* HANDLE TOOL BUTTON SLIDE OUT */
+toolBtn.addEventListener("click", function(){
+    toolBox.style.width = (toolBox.style.width == "25%") ? "0%" : "25%";
+    toolBox.style.border = (toolBox.style.width == "25%") ? "1px white dashed" : "none";
+})
+
 /* DISPLAY INPUT AREA WHEN 'Upload More Files' IS CLICKED */
 upMore.addEventListener("click", function(){
     //DISPLAY INPUT AREA
     // REMOVE FILE NAME AREA
     inpWrap.style.display = "flex"
     nameFi.style.display = "none"
+    upMore.style.display = "none"
 })
 
 /* FILE ARROW DOWN FUNCTION */
@@ -63,6 +74,10 @@ fileArrow.addEventListener("click", function(){
  /* UPLOAD FUNCTION */
  upload.addEventListener("click", function(){
     //CREATE IN ELEMENT IN FILE BOX FOR EACH FILE UPLOADED
+    for (const file of files.files) {
+        console.log("Files:" + file.name)
+    }
+    
     for (const file of files.files) {
         
         var fileDiv = `
