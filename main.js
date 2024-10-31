@@ -9,6 +9,9 @@ var scrollFile = document.getElementById("scroll-file");
 var uploadText = document.getElementById("up-txt");
 var mainScreen = document.getElementById("screen");
 
+var upMore = document.getElementById("up-more");
+var inpWrap = document.getElementById("inp-wrap");
+var nameFi = document.getElementById("filename");
 
 
 var fileList = [];
@@ -24,15 +27,29 @@ function addActiveClass(file){
     };
 }
 
+//Display function 
 function displayFile(file){
-    console.log(file)
+
     for(const f of file){    
         f.addEventListener("click", function(){
-            mainScreen.innerHTML = f.innerText;
+            // DISPLAY FILE NAME AREA
+            // REMOVE INPUT AREA
+            // DISPLAY 'Upload More Files'
+            nameFi.style.display = "block"
+            inpWrap.style.display = "none"
+            upMore.style.display = "block"
+            //POPULATE FILE NAME
+            nameFi.innerHTML = f.innerText;      
         });
-    };
-}
+    }};
 
+/* DISPLAY INPUT AREA WHEN 'Upload More Files' IS CLICKED */
+upMore.addEventListener("click", function(){
+    //DISPLAY INPUT AREA
+    // REMOVE FILE NAME AREA
+    inpWrap.style.display = "flex"
+    nameFi.style.display = "none"
+})
 
 /* FILE ARROW DOWN FUNCTION */
 fileArrow.addEventListener("click", function(){
