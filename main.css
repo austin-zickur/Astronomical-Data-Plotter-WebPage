@@ -49,6 +49,8 @@ color:white;
     
 }
 
+/*FILE FILE FILE FILE FILE FILE FILE FILE FILE*/
+
 #upload{
     color:white;
     padding:0.5em;
@@ -78,6 +80,7 @@ color:white;
     width:100%;
     height:25%;
     background-color:white;
+    transition: 0.2s ease all;
 }
 .file-ttl{
     color:white;
@@ -116,15 +119,7 @@ color:white;
     padding:0.25em;
     top:-0.3em;
     z-index:9;
-}
 
-.tools{
-    position:absolute;
-    right:0;
-    top:0;
-    background-color:#cadbdb;
-    width:25%;
-    height:100%;
 }
 
 .scroll-file{
@@ -134,8 +129,8 @@ color:white;
     height:80%;
     margin-top: 0;
     gap:2em;
-    /*background-color: greenyellow;*/
     overflow-x: scroll;
+    overflow-y:hidden;
    
 }
 
@@ -179,4 +174,39 @@ margin-left:1em;
 .more-files:active{
     transform: scale(100%);
     transition: 0.2s ease all;
+}
+
+/*TOOLS TOOLS TOOLS TOOLS*/
+
+.tools{
+    position:absolute;
+    right:0;
+    top:0;
+    background-color:#d9c52b;
+    border:1px white dashed;
+    width:0%;
+    height:100%;
+    transition: 0.2s ease all;
+}
+
+.tool-btn{
+    position:absolute;
+    top:10%;
+    left:-3.5em;
+    background-color:#ffffff;
+    border-radius:5px 0px 0px 5px;
+    padding:0.25em;
+}
+
+.tool-btn img{
+    width:90%;
+}
+
+.tool-btn img:hover{
+    transform: scale(108%);
+    cursor:pointer;
+}
+
+.tool-btn img:active{
+    transform: scale(100%);
 }
