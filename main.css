@@ -183,7 +183,6 @@ margin-left:1em;
     right:0;
     top:0;
     background-color:#d9c52b;
-    border:1px white dashed;
     width:0%;
     height:100%;
     transition: 0.2s ease all;
@@ -209,4 +208,10 @@ margin-left:1em;
 
 .tool-btn img:active{
     transform: scale(100%);
+}
+
+.tool-ttl{
+    text-align: center;
+    color:white;
+    letter-spacing: 3px;
 }

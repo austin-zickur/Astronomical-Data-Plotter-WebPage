@@ -50,7 +50,7 @@ function displayFile(file){
 /* HANDLE TOOL BUTTON SLIDE OUT */
 toolBtn.addEventListener("click", function(){
     toolBox.style.width = (toolBox.style.width == "25%") ? "0%" : "25%";
-    
+    toolBox.style.border = (toolBox.style.width == "25%") ? "1px white dashed" : "none";
 })
 
 /* DISPLAY INPUT AREA WHEN 'Upload More Files' IS CLICKED */
