@@ -75,6 +75,10 @@ fileArrow.addEventListener("click", function(){
  upload.addEventListener("click", function(){
     //CREATE IN ELEMENT IN FILE BOX FOR EACH FILE UPLOADED
     for (const file of files.files) {
+        console.log("Files:" + file.name)
+    }
+    
+    for (const file of files.files) {
         
         var fileDiv = `
         <div class="file-cont center">
