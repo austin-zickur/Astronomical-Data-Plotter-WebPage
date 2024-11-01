@@ -15,6 +15,7 @@ var nameFi = document.getElementById("filename");
 
 var toolBtn = document.getElementById("tool-btn");
 var toolBox = document.getElementById("tools");
+var toolTtl = document.getElementById("tool-ttl");
 
 
 var fileList = [];
@@ -51,6 +52,7 @@ function displayFile(file){
 toolBtn.addEventListener("click", function(){
     toolBox.style.width = (toolBox.style.width == "25%") ? "0%" : "25%";
     toolBox.style.border = (toolBox.style.width == "25%") ? "1px white dashed" : "none";
+    toolTtl.style.display = (toolBox.style.width == "25%") ? "block" : "none";
 })
 
 /* DISPLAY INPUT AREA WHEN 'Upload More Files' IS CLICKED */
