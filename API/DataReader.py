@@ -1,43 +1,34 @@
-import numpy as np
+#import numpy as np
 from astropy.io import ascii
-import matplotlib.pyplot as plt
-import os
-
-UPLOAD_FOLDER = "/tmp/uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-class FileSof:
-     saved_files = []
-
-     def __init__(self, uploaded_files):
-          self.uploaded_files = uploaded_files
-
-     def upload(self):
-        for file in self.uploaded_files:
-            file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-            file.save(file_path)
-            saved_files.append(file.filename)
-        return saved_files
-        
+#import matplotlib.pyplot as plt
 
 class Tablify:
     def __init__(self, file):
         self.file = file
-        return ascii.read(file)
+
+    def read(self):
+        data = ascii.read(self.file)
+        print(data)
+
+    def get_col_names(self):
+        data = ascii.read(self.file)
+        names = []
+        for name in data.columns:
+            names.append(name)
+        print(names)
+
+    def get_column_by_num(self, num):
+        self.num = num
+        data = ascii.read(self.file)
+        names = []
+        for name in data.columns:
+            names.append(name)
+        print(names[num])
+        return(data.columns[num])
 
 
+planet_file = Tablify("planets.csv")
 
-"""class DataWrangle:
-    def __init__(self, lst):
-        self.lst = lst
-
-    def displayList(self):
-        print(self.lst)
-
-    def tablify(self):
-        arr = np.array(self.lst)
-        """
-
-    
-thelis = DataWrangle([1,2])
-thelis.displayList()
+planet_file.read()
+planet_file.get_col_names()
+planet_file.get_column_by_num(0)
